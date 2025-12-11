@@ -15,7 +15,7 @@ export default function Documents() {
   useEffect(() => {
     if (!user) return;
 
-    axios.get("https://document-back.onrender.com/api/viewDocument", { 
+    axios.get("http://127.0.0.1:5000/api/viewDocument", { 
       params: {
         user_id: user.id
       }
