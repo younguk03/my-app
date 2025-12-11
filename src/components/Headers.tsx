@@ -17,12 +17,12 @@ export default function Headers() {
 
   return (
     <div className='header-container'>
+      <a href="/documents" style={{ textDecoration: 'none' }}>
       <div className='logo2'>
         <Sparkles style={{ width: '29px', height: '26px', color: '#000000' }} />
-        <h1 className='web-title'>
-          DCAI
-        </h1>
+        <h1 className='web-title' style={{ color: '#000000' }}>DCAI</h1>
       </div>
+      </a>
       <div className='header-button'>
         {user? (
           <>
