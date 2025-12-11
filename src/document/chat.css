@@ -1,0 +1,203 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 24px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 transparent;
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 3px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #d0d0d0;
+}
+
+.message {
+  max-width: 75%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: pre-wrap; /* 줄바꿈 보존 */
+  position: relative;
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  border-bottom-right-radius: 4px;
+  animation: messageSlideInRight 0.3s ease-out;
+}
+
+@keyframes messageSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #e8e8e8;
+  animation: messageSlideInLeft 0.3s ease-out;
+}
+
+@keyframes messageSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.input-area {
+  display: flex;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e8e8e8;
+  gap: 12px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.ai-input {
+  flex: 1;
+  padding: 14px 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  outline: none;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.ai-input::placeholder {
+  color: #999999;
+}
+
+.ai-input:focus {
+  background-color: #ffffff;
+  border-color: #d0d0d0;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.ai-button {
+  padding: 14px 28px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ai-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ai-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.ai-button:hover {
+  background-color: #2d2d2d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.ai-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ai-button:disabled {
+  background-color: #e0e0e0;
+  color: #999999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ai-button:disabled::before {
+  display: none;
+}
+
+/* 로딩 애니메이션 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* 로딩 애니메이션은 loading 클래스가 있을 때만 적용 */
+.message.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+  color: #888;
+  font-style: italic;
+}

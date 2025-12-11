@@ -1,0 +1,244 @@
+.regidster-page {
+  border: 1px solid gray;
+  border: none;
+  display: flexbox;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(160, 160, 160, 0.2),
+    0 6px 20px 0 rgba(179, 179, 179, 0.19);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.register-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.register-input {
+  width: 280px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  /* border: 1px solid black; */
+  border: none;
+  background-color: rgb(236, 236, 236);
+  outline: none;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.register-button {
+  width: 296px;
+  font-size: 18px;
+  height: 44px;
+  color: white;
+  background-color: #000000;
+  border-radius: 7px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.register-button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.login-page {
+  border: 1px solid gray;
+  border: none;
+  display: flexbox;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(160, 160, 160, 0.2),
+    0 6px 20px 0 rgba(179, 179, 179, 0.19);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.login-input {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  /* border: 1px solid black; */
+  border: none;
+  background-color: rgb(236, 236, 236);
+  outline: none;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.login-button {
+  width: 260px;
+  font-size: 18px;
+  height: 44px;
+  color: white;
+  background-color: #000000;
+  border-radius: 7px;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.question-register {
+  margin: 0;
+  font-size: small;
+  color: gray;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.logo1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Header Styles */
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.web-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header-button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-button span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.to-login {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.to-login:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.upload-input {
+  color: white;
+  background-color: black;
+}
+
+.file-selector-container {
+    display: flex;
+    gap: 15px; /* 버튼 사이 간격 */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+/* 2. 커스텀 파일 선택 버튼 스타일 */
+.custom-file-select-button {
+    padding: 10px 20px;
+    border: 2px solid #007bff; /* 브랜드 색상 사용 */
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-file-select-button:hover {
+    background-color: #0056b3;
+}
+
+/* 3. 업로드 제출 버튼 스타일 */
+.upload-submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* 비활성화 상태 (Disabled) */
+.upload-submit-button.disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+/* 활성화 상태 (Active) */
+.upload-submit-button.active {
+    background-color: #28a745; /* 성공/강조 색상 사용 */
+    color: white;
+    cursor: pointer;
+}
+
+.upload-submit-button.active:hover {
+    background-color: #1e7e34;
+}
