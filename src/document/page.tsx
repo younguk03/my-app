@@ -6,7 +6,7 @@ import AnalysisPanel from "./components/AnalysisPanel.tsx";
 import Headers from "../components/Headers.tsx";
 import { useAuth } from "../AuthContext.tsx";
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "http://127.0.0.1:5000/";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
