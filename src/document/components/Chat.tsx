@@ -36,7 +36,7 @@ export default function Chat({ fileId }: ChatProps) {
     try {
       // 2. Flask 서버로 요청 (포트 5000)
       console.log("Sending chat request:", { message: input, fileId });
-      const response = await fetch("https://younguk.pythonanywhere.com/api/chat", {
+      const response = await fetch("http://127.0.0.1:5000/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
