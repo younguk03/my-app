@@ -13,7 +13,7 @@ export default function LoginPage() {
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://younguk.pythonanywhere.com/api/login', {
+      const response = await fetch('https://document-back.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
