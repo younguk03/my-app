@@ -23,7 +23,7 @@ export default function Documentpage() {
     formData.append('user_id', user.id); 
     
     try {
-      const response = await fetch('http://localhost:5000/api/upload', {
+      const response = await fetch('https://younguk.pythonanywhere.com/api/upload', {
         method: 'POST',
         body: formData,
       });
