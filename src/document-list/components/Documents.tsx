@@ -47,7 +47,7 @@ export default function Documents() {
     if (!window.confirm("정말로 이 문서를 삭제하시겠습니까?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/delete/${docId}`, {
+      await axios.delete(`https://document-back.onrender.com/api/delete/${docId}`, {
         params: { user_id: user.id }
       });
 
